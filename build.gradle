@@ -1,0 +1,57 @@
+plugins {
+    id "java-gradle-plugin"
+}
+
+group 'io.vadeg.gradle'
+version '1.0.0-SNAPSHOT'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.0'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+// Write the plugin's classpath to a file to share with the tests
+task createClasspathManifest {
+    def outputDir = file("$buildDir/$name")
+
+    inputs.files sourceSets.main.runtimeClasspath
+    outputs.dir outputDir
+
+    doLast {
+        outputDir.mkdirs()
+        file("$outputDir/plugin-classpath.txt").text = sourceSets.main.runtimeClasspath.join("\n")
+    }
+}
+
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+    testCompile("org.spockframework:spock-core:1.1-groovy-2.4") {
+        exclude module: "groovy-all"
+    }
+    testRuntime files(createClasspathManifest)
+}
+
+test {
+    exclude '**/it/**'
+}
+
+task integrationTest(type: Test) {
+    dependsOn 'build'
+    reports {
+        html {
+            destination file("$buildDir/reports/tests/integrationTests")
+        }
+    }
+    include '**/it/**'
+}
+
