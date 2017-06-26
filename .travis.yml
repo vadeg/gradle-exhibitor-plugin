@@ -12,4 +12,4 @@ services:
 
 before_install:
   - docker pull mbabineau/zookeeper-exhibitor:latest
-  - docker run -d -p 127.0.0.1:8181:8181 -e HOSTNAME=localhost
+  - docker run -d -p 127.0.0.1:8181:8181 -e HOSTNAME=localhost mbabineau/zookeeper-exhibitor:latest
