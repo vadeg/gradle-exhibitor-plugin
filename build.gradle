@@ -1,5 +1,7 @@
 plugins {
     id "java-gradle-plugin"
+    id "groovy"
+    id 'com.avast.gradle.docker-compose' version "0.4.5"
 }
 
 group 'io.vadeg.gradle'
@@ -22,8 +24,6 @@ task createClasspathManifest {
         file("$outputDir/plugin-classpath.txt").text = sourceSets.main.runtimeClasspath.join("\n")
     }
 }
-
-apply plugin: 'groovy'
 
 sourceCompatibility = 1.8
 
@@ -54,4 +54,4 @@ task integrationTest(type: Test) {
     }
     include '**/it/**'
 }
-
+dockerCompose.isRequiredBy(integrationTest)

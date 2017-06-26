@@ -1,0 +1,7 @@
+version: '2'
+services:
+  exhibitor:
+    image: 'mbabineau/zookeeper-exhibitor'
+    ports:
+      - "2181:2181"
+      - "8181:8181"
