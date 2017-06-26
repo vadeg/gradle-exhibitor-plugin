@@ -54,4 +54,4 @@ task integrationTest(type: Test) {
     }
     include '**/it/**'
 }
-dockerCompose.isRequiredBy(integrationTest)
+//dockerCompose.isRequiredBy(integrationTest)
