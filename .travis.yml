@@ -1,5 +1,6 @@
 dist: trusty
 language: java
+sudo: required
 
 script: ./gradlew clean integrationTest
 
