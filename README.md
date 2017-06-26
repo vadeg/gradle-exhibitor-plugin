@@ -1,4 +1,5 @@
 # Gradle exhibitor plugin
+[![Build Status](https://travis-ci.org/vadeg/gradle-exhibitor-plugin.svg?branch=master)](https://travis-ci.org/vadeg/gradle-exhibitor-plugin)
 
 ## Overview
 
