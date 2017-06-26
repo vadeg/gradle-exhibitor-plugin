@@ -1,2 +1,7 @@
 dist: trusty
 language: java
+
+script: ./gradlew clean integrationTest
+
+jdk:
+  - oraclejdk8
