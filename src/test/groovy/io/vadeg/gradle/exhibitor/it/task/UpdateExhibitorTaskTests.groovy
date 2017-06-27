@@ -1,5 +1,6 @@
 package io.vadeg.gradle.exhibitor.it.task
 
+import io.vadeg.gradle.exhibitor.client.ExhibitorClient
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 
@@ -14,8 +15,7 @@ class UpdateExhibitorTaskTests
                 }
                 
                 exhibitor {
-                    url = 'http://localhost:8080'
-                    files = ['a', 'b']                     
+                    url = 'http://localhost:8080'                                         
                 }
             """
         when:
@@ -28,7 +28,43 @@ class UpdateExhibitorTaskTests
                 .build()
 
         then:
-        result.output.contains('Url: http://localhost:8080 : [a, b]')
         result.task(":updateExhibitor").outcome == TaskOutcome.SUCCESS
+    }
+
+    def "Apply data to exhibitor"() {
+        given:
+        buildFile << """
+                plugins {
+                    id 'io.vadeg.gradle.exhibitor'
+                }
+                
+                exhibitor {
+                    url = 'http://localhost:8181'
+                    files = ['sample.zkscript']                     
+                }
+            """
+        when:
+        def file = testProjectDir.newFile("sample.zkscript")
+        file << """
+                    create a/b/c value1
+                    create a/b/d 123
+                    create a this is a test """
+        def result = GradleRunner.create()
+                .withPluginClasspath()
+                .withDebug(true)
+                .withProjectDir(testProjectDir.root)
+                .withArguments("--debug", 'updateExhibitor')
+                .withPluginClasspath(pluginClasspath)
+                .build()
+
+        then:
+        result.output.contains('sample.zkscript processed')
+        result.task(":updateExhibitor").outcome == TaskOutcome.SUCCESS
+        def client = new ExhibitorClient("http://localhost:8181")
+        def value = client.get("a/b/c")
+        value == "value1"
+
+        cleanup:
+        client.delete("a")
     }
 }
