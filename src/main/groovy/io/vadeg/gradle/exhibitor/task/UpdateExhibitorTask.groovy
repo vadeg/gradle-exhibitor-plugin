@@ -44,6 +44,7 @@ class UpdateExhibitorTask
 
     @TaskAction
     def process() {
-        println "Url: ${getUrl()} : ${files.getOrNull()}"
+//        println "Url: ${getUrl()} : ${files.getOrNull()}"
+        println "Not implemented yet"
     }
 }
