@@ -5,7 +5,7 @@ import groovyx.net.http.HTTPBuilder
 import groovyx.net.http.Method
 import org.gradle.api.logging.Logging
 
-import static io.vadeg.gradle.exhibitor.client.EncodingUtils.toBinaryString;
+import static io.vadeg.gradle.exhibitor.client.EncodingUtils.toBinaryString
 
 class ExhibitorClient {
 

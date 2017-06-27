@@ -16,11 +16,11 @@ class Result {
     }
 
     @Override
-    public String toString() {
+    String toString() {
         return """\
-Result{
-    succeed=$succeed,
-    message=$message
-}"""
+            Result{
+                succeed=$succeed,
+                message=$message
+            }"""
     }
 }
