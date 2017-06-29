@@ -1,7 +1,7 @@
-package io.vadeg.gradle.exhibitor.task
+package com.github.vadeg.gradle.exhibitor.task
 
-import io.vadeg.gradle.exhibitor.client.CommandLine
-import io.vadeg.gradle.exhibitor.client.ExhibitorClient
+import com.github.vadeg.gradle.exhibitor.client.CommandLine
+import com.github.vadeg.gradle.exhibitor.client.ExhibitorClient
 import org.gradle.api.DefaultTask
 import org.gradle.api.provider.PropertyState
 import org.gradle.api.provider.Provider

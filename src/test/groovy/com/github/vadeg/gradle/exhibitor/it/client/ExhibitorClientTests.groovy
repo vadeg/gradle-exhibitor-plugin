@@ -1,7 +1,7 @@
-package io.vadeg.gradle.exhibitor.it.client
+package com.github.vadeg.gradle.exhibitor.it.client
 
-import io.vadeg.gradle.exhibitor.client.ExhibitorClient
-import io.vadeg.gradle.exhibitor.client.Result
+import com.github.vadeg.gradle.exhibitor.client.ExhibitorClient
+import com.github.vadeg.gradle.exhibitor.client.Result
 import spock.lang.Specification
 import spock.lang.Unroll
 

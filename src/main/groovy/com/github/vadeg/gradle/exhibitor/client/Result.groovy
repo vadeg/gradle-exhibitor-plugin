@@ -1,4 +1,4 @@
-package io.vadeg.gradle.exhibitor.client
+package com.github.vadeg.gradle.exhibitor.client
 
 class Result {
 

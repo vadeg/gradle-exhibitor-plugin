@@ -1,7 +1,7 @@
-package io.vadeg.gradle.exhibitor
+package com.github.vadeg.gradle.exhibitor
 
-import io.vadeg.gradle.exhibitor.domain.ExhibitorExtension
-import io.vadeg.gradle.exhibitor.task.UpdateExhibitorTask
+import com.github.vadeg.gradle.exhibitor.domain.ExhibitorExtension
+import com.github.vadeg.gradle.exhibitor.task.UpdateExhibitorTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

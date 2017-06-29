@@ -1,10 +1,10 @@
-package io.vadeg.gradle.exhibitor.client
+package com.github.vadeg.gradle.exhibitor.client
 
 import spock.lang.Specification
 import spock.lang.Unroll
 
-import static io.vadeg.gradle.exhibitor.client.CommandLine.Type.CREATE
-import static io.vadeg.gradle.exhibitor.client.CommandLine.Type.DELETE
+import static com.github.vadeg.gradle.exhibitor.client.CommandLine.Type.CREATE
+import static com.github.vadeg.gradle.exhibitor.client.CommandLine.Type.DELETE
 
 class CommandLineTests
         extends Specification {

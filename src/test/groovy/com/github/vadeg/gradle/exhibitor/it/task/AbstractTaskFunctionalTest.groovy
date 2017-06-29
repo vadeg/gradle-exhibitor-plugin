@@ -1,4 +1,4 @@
-package io.vadeg.gradle.exhibitor.it.task
+package com.github.vadeg.gradle.exhibitor.it.task
 
 import org.junit.Rule
 import org.junit.rules.TemporaryFolder

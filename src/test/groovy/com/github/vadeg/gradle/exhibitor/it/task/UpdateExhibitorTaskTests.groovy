@@ -1,6 +1,6 @@
-package io.vadeg.gradle.exhibitor.it.task
+package com.github.vadeg.gradle.exhibitor.it.task
 
-import io.vadeg.gradle.exhibitor.client.ExhibitorClient
+import com.github.vadeg.gradle.exhibitor.client.ExhibitorClient
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 
@@ -11,7 +11,7 @@ class UpdateExhibitorTaskTests
         given:
         buildFile << """
                 plugins {
-                    id 'io.vadeg.gradle.exhibitor'
+                    id 'com.github.vadeg.exhibitor'
                 }
                 
                 exhibitor {
@@ -35,7 +35,7 @@ class UpdateExhibitorTaskTests
         given:
         buildFile << """
                 plugins {
-                    id 'io.vadeg.gradle.exhibitor'
+                    id 'com.github.vadeg.exhibitor'
                 }
                 
                 exhibitor {

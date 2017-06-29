@@ -1,4 +1,4 @@
-package io.vadeg.gradle.exhibitor.client
+package com.github.vadeg.gradle.exhibitor.client
 
 import groovy.transform.CompileStatic
 import org.codehaus.groovy.runtime.EncodingGroovyMethods

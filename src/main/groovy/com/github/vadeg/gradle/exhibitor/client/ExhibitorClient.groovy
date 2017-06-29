@@ -1,11 +1,11 @@
-package io.vadeg.gradle.exhibitor.client
+package com.github.vadeg.gradle.exhibitor.client
 
 import groovyx.net.http.ContentType
 import groovyx.net.http.HTTPBuilder
 import groovyx.net.http.Method
 import org.gradle.api.logging.Logging
 
-import static io.vadeg.gradle.exhibitor.client.EncodingUtils.toBinaryString
+import static EncodingUtils.toBinaryString
 
 class ExhibitorClient {
 
