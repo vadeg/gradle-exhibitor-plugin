@@ -19,7 +19,6 @@ plugins {
 apply plugin: "com.gradle.plugin-publish"
 
 group 'com.github.vadeg'
-version '1.0.1-SNAPSHOT'
 
 task wrapper(type: Wrapper) {
   gradleVersion = '4.0'
