@@ -60,7 +60,7 @@ test {
 }
 
 pluginBundle {
-    website = 'https://github.com/vadeg'
+    website = 'https://github.com/vadeg/gradle-exhibitor-plugin'
     vcsUrl = 'https://github.com/vadeg/gradle-exhibitor-plugin'
     description = 'Exhibitor plugin allows to update Zookeeper settings using Exhibitor API'
     tags = ['exhibitor', 'zookeeper']
