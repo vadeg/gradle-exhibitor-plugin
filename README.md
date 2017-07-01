@@ -17,7 +17,7 @@ Gradle plugin which allows to upload data to Zookeeper using Exhibitor Rest API.
 Install using plugins section 
 ```
 plugins {
-  id "com.github.vadeg.exhibitor" version "1.0.0"
+  id "com.github.vadeg.exhibitor" version "release_version"
 }
 ```
 
@@ -30,13 +30,14 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.github.vadeg:gradle-exhibitor-plugin:1.0.0"
+    classpath "gradle.plugin.com.github.vadeg:gradle-exhibitor-plugin:release_version"
   }
 }
 
 apply plugin: "com.github.vadeg.exhibitor"
 
 ```
+where `release_version` is a plugin version.
 
 ## Create exhibitor script
 
