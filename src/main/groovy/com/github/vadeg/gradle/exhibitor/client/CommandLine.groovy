@@ -27,7 +27,7 @@ class CommandLine {
 
     static def parse(String commandLine) {
         def line = commandLine?.trim()?.replaceAll("\\s+", " ")
-        if (!line) {
+        if (!line || line?.startsWith("#")) {
             return null
         }
         def values = line.split(SEPARATOR)

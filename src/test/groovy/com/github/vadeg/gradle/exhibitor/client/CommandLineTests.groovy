@@ -36,9 +36,10 @@ class CommandLineTests
         commandLine == null
 
         where:
-        name         | line
-        "empty line" | ""
-        "null line"  | null
+        name                     | line
+        "empty line"             | ""
+        "null line"              | null
+        "# this is comment line" | null
     }
 
     def "Single command parsing should fail"() {

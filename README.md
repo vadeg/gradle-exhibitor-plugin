@@ -57,6 +57,7 @@ create a/b/c 123
 create test-string hello world
 create test-string "hello world"
 delete a/b
+#This is comment line example
 ```
 
 ## Configure plugin
@@ -69,7 +70,7 @@ exhibitor {
 }
 ```
 - `url` is an exhibitor http url
-- `files` is a list of file names related to project root.
+- `files` is a list of script file names related to project root.
 
 ## Apply script
 ```

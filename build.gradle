@@ -13,6 +13,7 @@ plugins {
     id "java-gradle-plugin"
     id "groovy"
     id 'com.avast.gradle.docker-compose' version "0.4.5"
+    id 'net.researchgate.release' version '2.4.0'
 }
 
 apply plugin: "com.gradle.plugin-publish"
